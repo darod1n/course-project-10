@@ -1,6 +1,6 @@
 function [path, speed, boost] = getPathSpeedBoost(a0, a1, a2, a3, a4, a5, t, N)
-%UNTITLED Summary of this function goes here
-%   Detailed explanation goes here
+%Функция getPathSpeedBoost принимает в качестве аргументов коэффициенты
+%a0-a5, t - вектор времени, N - количество точек
     path = zeros(1, N);
     speed = zeros(1, N);
     boost = zeros(1, N);
