@@ -1,0 +1,3 @@
+\selectlanguage *{russian}
+\contentsline {paragraph}{\centerline {{Введение}}\vspace {1.5em}}{2}{section*.1}%
+\contentsline {section}{\uppercase {Введение}}{2}{section*.1}%
