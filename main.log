@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 2.9.7440 64-bit) (preloaded format=xelatex 2020.5.19)  19 MAY 2020 20:22
+This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 2.9.7440 64-bit) (preloaded format=xelatex 2020.5.19)  19 MAY 2020 22:42
 entering extended mode
 **./main.tex
 (main.tex
@@ -461,19 +461,15 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
 LaTeX Info: Redefining \[ on input line 2859.
 LaTeX Info: Redefining \] on input line 2860.
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/tools\enumerate.sty"
-Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
-\@enLab=\toks31
-)
 ("C:\Program Files\MiKTeX 2.9\tex/latex/tools\indentfirst.sty"
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
 ("C:\Program Files\MiKTeX 2.9\tex/latex/float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count283
-\float@exts=\toks32
+\float@exts=\toks31
 \float@box=\box56
-\@float@everytoks=\toks33
+\@float@everytoks=\toks32
 \@floatcapt=\box57
 )
 ("C:\Program Files\MiKTeX 2.9\tex/latex/multirow\multirow.sty"
@@ -482,11 +478,6 @@ Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
 \multirow@cntb=\count284
 \multirow@dima=\skip56
 \bigstrutjot=\dimen159
-)
-("C:\Program Files\MiKTeX 2.9\tex/latex/chngcntr\chngcntr.sty"
-Package: chngcntr 2018/04/09 v1.1a change counter resetting
-Package chngcntr Info: \counterwithout already defined.
-(chngcntr)             Quitting chngcntr on input line 21.
 )
 ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\hyperref.sty"
 Package: hyperref 2020-05-15 v7.00e Hypertext links for LaTeX
@@ -604,7 +595,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip57
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 50.
+Package hyperref Info: Option `colorlinks' set `true' on input line 44.
 
 ("C:\Program Files\MiKTeX 2.9\tex/generic/stringenc\se-ascii-print.def"
 File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
@@ -627,14 +618,14 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutheight=\dimen169
 \Gm@layouthoffset=\dimen170
 \Gm@layoutvoffset=\dimen171
-\Gm@dimlist=\toks34
+\Gm@dimlist=\toks33
 
 ("C:\Program Files\MiKTeX 2.9\tex/xelatex/xetexconfig\geometry.cfg"))
 ("C:\Program Files\MiKTeX 2.9\tex/latex/enumitem\enumitem.sty"
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip58
 \enit@outerparindent=\dimen172
-\enit@toks=\toks35
+\enit@toks=\toks34
 \enit@inbox=\box59
 \enit@count@id=\count300
 \enitdp@description=\count301
@@ -676,27 +667,6 @@ Package tocloft Info: The document has section divisions on input line 51.
 \cfttabindent=\skip88
 \cfttabnumwidth=\skip89
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/caption\caption.sty"
-Package: caption 2020/05/10 v3.4j Customizing captions (AR)
-
-("C:\Program Files\MiKTeX 2.9\tex/latex/caption\caption3.sty"
-Package: caption3 2020/05/10 v1.11 caption3 kernel (AR)
-Package caption3 Info: TeX engine: e-TeX on input line 61.
-\captionmargin=\dimen173
-\captionmargin@=\dimen174
-\captionwidth=\dimen175
-\caption@tempdima=\dimen176
-\caption@indent=\dimen177
-\caption@parindent=\dimen178
-\caption@hangindent=\dimen179
-Package caption Info: Standard document class detected.
-)
-\c@caption@flags=\count304
-\c@continuedfloat=\count305
-Package caption Info: float package is loaded.
-Package caption Info: hyperref package is loaded.
-Package caption Info: listings package is loaded.
-)
 ("C:\Program Files\MiKTeX 2.9\tex/latex/textcase\textcase.sty"
 Package: textcase 2019/09/14 v1.00 Text only upper/lower case changing (DPC)
 )
@@ -705,12 +675,12 @@ Package: titlesec 2019/10/16 v2.13 Sectioning titles
 \ttl@box=\box60
 \beforetitleunit=\skip90
 \aftertitleunit=\skip91
-\ttl@plus=\dimen180
-\ttl@minus=\dimen181
-\ttl@toksa=\toks36
-\titlewidth=\dimen182
-\titlewidthlast=\dimen183
-\titlewidthfirst=\dimen184
+\ttl@plus=\dimen173
+\ttl@minus=\dimen174
+\ttl@toksa=\toks35
+\titlewidth=\dimen175
+\titlewidthlast=\dimen176
+\titlewidthfirst=\dimen177
 )) (main.aux)
 \openout1 = `main.aux'.
 
@@ -822,7 +792,7 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
 
 )
-\c@lstlisting=\count306
+\c@lstlisting=\count304
 Package hyperref Info: Link coloring ON on input line 13.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\nameref.sty"
@@ -834,7 +804,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ("C:\Program Files\MiKTeX 2.9\tex/generic/gettitlestring\gettitlestring.sty"
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count307
+\c@section@level=\count305
 )
 LaTeX Info: Redefining \ref on input line 13.
 LaTeX Info: Redefining \pageref on input line 13.
@@ -878,8 +848,6 @@ LaTeX Info: Redefining \nameref on input line 13.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: End \AtBeginDocument code.
 (main.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
@@ -916,6 +884,59 @@ Underfull \hbox (badness 1117) in paragraph at lines 7--8
 
 [3
 
+]) (chapters/technical_requirements.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\uppercase' on input line 2.
+
+[4
+
+] [5] [6
+
+]
+File: images/va.jpg Graphic file (type bmp)
+<images/va.jpg>
+ [7
+
+]
+File: images/posad_config.jpg Graphic file (type bmp)
+<images/posad_config.jpg>
+ [8
+
+]
+Underfull \hbox (badness 1867) in paragraph at lines 48--49
+\TU/TimesNewRoman(1)/m/n/14.4 ПТДУ представляет собой РДТТ с регулируемой тягой
+ по величине и
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--49
+
+ []
+
+
+Underfull \hbox (badness 3503) in paragraph at lines 57--58
+[]\TU/TimesNewRoman(1)/m/n/14.4 Сопла всех СУБ снабжены собственными регулятора
+ми расхода,
+ []
+
+[9
+
+]
+File: images/scheme_ptdu.jpg Graphic file (type bmp)
+<images/scheme_ptdu.jpg>
+ [10]
+File: images/scheme_subrp.jpg Graphic file (type bmp)
+<images/scheme_subrp.jpg>
+File: images/effect_nozzle.jpg Graphic file (type bmp)
+<images/effect_nozzle.jpg>
+ [11
+
+]
+File: images/linear_vect_draft.jpg Graphic file (type bmp)
+<images/linear_vect_draft.jpg>
+ [12] [13
+
 ])
 The property list \polyglossia@langsetup contains the pairs (without outer
 braces):
@@ -951,30 +972,21 @@ braces):
 >  {russian/babelname}  =>  {russian}
 >  {russian/localnumeral}  =>  {russiannumerals}
 >  {russian/Localnumeral}  =>  {Russiannumerals}.
-
-
-Package caption Warning: Unused \captionsetup[figure] on input line 99.
-See the caption package documentation for explanation.
-
-
-Package caption Warning: Unused \captionsetup[table] on input line 100.
-See the caption package documentation for explanation.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 32.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 32.
-(main.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 32.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 32.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 34.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 34.
+ (main.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 34.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 34.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 353EE8C5ECEEEBB47CA42A6147FE42BD;381.
+(rerunfilecheck)             Checksum: B33C70D3CF0AFA1D377DA8D3F36FE0F0;2169.
  ) 
 Here is how much of TeX's memory you used:
- 21726 strings out of 414083
- 381348 string characters out of 2898444
- 699960 words of memory out of 3000000
- 39101 multiletter control sequences out of 15000+200000
- 535441 words of font info for 54 fonts, out of 3000000 for 9000
+ 20550 strings out of 414083
+ 358376 string characters out of 2898444
+ 683112 words of memory out of 3000000
+ 37922 multiletter control sequences out of 15000+200000
+ 535449 words of font info for 55 fonts, out of 3000000 for 9000
  1348 hyphenation exceptions out of 8191
- 60i,6n,98p,843b,331s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 47i,7n,84p,843b,472s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on main.pdf (3 pages).
+Output written on main.pdf (13 pages).

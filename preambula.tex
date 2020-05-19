@@ -25,20 +25,14 @@
 \setdefaultlanguage{russian}
 
 \usepackage{amssymb,amsfonts,amsmath} % Математика
-\numberwithin{equation}{section} % Формула вида секция.номер
 
-\usepackage{enumerate} % Тонкая настройка списков
+\usepackage{amssymb}
 \usepackage{indentfirst} % Красная строка после заголовка
 \usepackage{float} % Расширенное управление плавающими объектами
 \usepackage{multirow} % Сложные таблицы
 
 % Пути к каталогам с изображениями
 \usepackage{graphicx} % Вставка картинок и дополнений
-\graphicspath{{images/}{images/userguide/}{images/testing/}{images/infrastructure/}{extra/}{extra/drafts/}}
-
-% Формат подрисуночных записей
-\usepackage{chngcntr}
-\counterwithin{figure}{section}
 
 % Гиперссылки
 \usepackage{hyperref}
@@ -77,13 +71,13 @@
 \usepackage{enumitem}
 \setlist[enumerate,itemize]{leftmargin=12.7mm} % Отступы в списках
 
-\makeatletter
-\AddEnumerateCounter{\asbuk}{\@asbuk}{м)}
-\makeatother
-\setlist{nolistsep} % Нет отступов между пунктами списка
-\renewcommand{\labelitemi}{--} % Маркет списка --
-\renewcommand{\labelenumi}{\asbuk{enumi})} % Список второго уровня
-\renewcommand{\labelenumii}{\arabic{enumii})} % Список третьего уровня
+%\makeatletter
+%\AddEnumerateCounter{\asbuk}{\@asbuk}{м)}
+%\makeatother
+%\setlist{nolistsep} % Нет отступов между пунктами списка
+%\renewcommand{\labelitemi}{--} % Маркет списка --
+%\renewcommand{\labelenumi}{\asbuk{enumi})} % Список второго уровня
+%\renewcommand{\labelenumii}{\arabic{enumii})} % Список третьего уровня
 
 % Содержание
 \usepackage{tocloft}
@@ -94,43 +88,12 @@
 \setcounter{tocdepth}{3}                            % Глубина оглавления, до subsubsection
 
 % Формат подрисуночных надписей
-\RequirePackage{caption}
-\DeclareCaptionLabelSeparator{defffis}{ -- } % Разделитель
-\captionsetup[figure]{justification=centering, labelsep=defffis, format=plain} % Подпись рисунка по центру
-\captionsetup[table]{justification=raggedright, labelsep=defffis, format=plain, singlelinecheck=false} % Подпись таблицы слева
-\addto\captionsrussian{\renewcommand{\figurename}{Рис.}} % Имя фигуры
+%\RequirePackage{caption}
+%\DeclareCaptionLabelSeparator{defffis}{ -- } % Разделитель
+%\captionsetup[figure]{justification=centering, labelsep=defffis, format=plain} % Подпись рисунка по центру
+%\captionsetup[table]{justification=raggedright, labelsep=defffis, format=plain, singlelinecheck=false} % Подпись таблицы слева
+%\addto\captionsrussian{\renewcommand{\figurename}{Рис.}} % Имя фигуры
 
-% Пользовательские функции
-\newcommand{\addimg}[4]{ % Добавление одного рисунка
-	\begin{figure}
-		\centering
-		\includegraphics[width=#2\linewidth]{#1}
-		\caption{#3} \label{#4}
-	\end{figure}
-}
-\newcommand{\addimghere}[4]{ % Добавить рисунок непосредственно в это место
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=#2\linewidth]{#1}
-		\caption{#3} \label{#4}
-	\end{figure}
-}
-\newcommand{\addtwoimghere}[5]{ % Вставка двух рисунков
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=#2\linewidth]{#1}
-		\hfill
-		\includegraphics[width=#3\linewidth]{#2}
-		\caption{#4} \label{#5}
-	\end{figure}
-}
-\newcommand{\addimgapp}[2]{ % Это костыль для приложения Б
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=1\linewidth]{#1}
-		\caption*{#2}
-	\end{figure}
-}
 
 % Заголовки секций в оглавлении в верхнем регистре
 \usepackage{textcase}
