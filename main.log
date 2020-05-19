@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 2.9.7440 64-bit) (preloaded format=xelatex 2020.5.19)  19 MAY 2020 20:18
+This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 2.9.7440 64-bit) (preloaded format=xelatex 2020.5.19)  19 MAY 2020 20:22
 entering extended mode
 **./main.tex
 (main.tex
@@ -896,7 +896,14 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
  [1
 
 ]
-(chapters/introduction.tex
+(chapters/abbreviation.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\uppercase' on input line 1.
+
+[2
+
+]) (chapters/introduction.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\uppercase' on input line 2.
@@ -907,7 +914,7 @@ Underfull \hbox (badness 1117) in paragraph at lines 7--8
 ие рациональной
  []
 
-[2
+[3
 
 ])
 The property list \polyglossia@langsetup contains the pairs (without outer
@@ -953,21 +960,21 @@ See the caption package documentation for explanation.
 Package caption Warning: Unused \captionsetup[table] on input line 100.
 See the caption package documentation for explanation.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 30.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 30.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 32.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 32.
 (main.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 30.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 30.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 32.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 32.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 837F399EDC92DE69BC3A12EBBFCD0EE6;108.
+(rerunfilecheck)             Checksum: 353EE8C5ECEEEBB47CA42A6147FE42BD;381.
  ) 
 Here is how much of TeX's memory you used:
- 21722 strings out of 414083
- 381269 string characters out of 2898444
- 700666 words of memory out of 3000000
- 39100 multiletter control sequences out of 15000+200000
+ 21726 strings out of 414083
+ 381348 string characters out of 2898444
+ 699960 words of memory out of 3000000
+ 39101 multiletter control sequences out of 15000+200000
  535441 words of font info for 54 fonts, out of 3000000 for 9000
  1348 hyphenation exceptions out of 8191
- 60i,6n,98p,843b,329s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 60i,6n,98p,843b,331s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on main.pdf (2 pages).
+Output written on main.pdf (3 pages).
