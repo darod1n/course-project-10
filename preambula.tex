@@ -1,15 +1,25 @@
 %	Преамбула
 
 %	Шрифты
-\defaultfontfeatures{Ligatures=TeX}
-\setmainfont{Times New Roman} % Нормоконтроллеры хотят именно его
-\newfontfamily\cyrillicfont{Times New Roman}
+%\defaultfontfeatures{Ligatures=TeX}
+%\setmainfont{Times New Roman} % Нормоконтроллеры хотят именно его
+%\newfontfamily\cyrillicfont{Times New Roman}
 %\setsansfont{Liberation Sans} % Тут я его не использую, но если пригодится
-\setmonofont{FreeMono} % Моноширинный шрифт для оформления кода
+%\setmonofont{FreeMono} % Моноширинный шрифт для оформления кода
+
+%	Русский язык
+% Русский язык
+\usepackage{polyglossia}
+\setdefaultlanguage{russian}
 
 %	Гиперссылки
 
 %	Отступы по ГОСТ
+\usepackage{geometry}
+\geometry{left=3cm}
+\geometry{right=1cm}
+\geometry{top=2cm}
+\geometry{bottom=2cm}
 
 %	Секции без номеров(ВВЕДЕНИЕ, ЗАКЛЮЧЕНИЕ, СОКРАЩЕНИЯ ПРИНЯТЫЕ В ТЕКСТЕ....)
 \newcommand{\anonsection}[1]{
