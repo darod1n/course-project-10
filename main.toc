@@ -13,3 +13,5 @@
 \contentsline {subsection}{\numberline {1.5}Требования к СУ}{13}{subsection.1.5}%
 \contentsline {section}{\numberline {2}Алгоритм определения момента включения ПТДУ}{14}{section.2}%
 \contentsline {section}{\numberline {3}Математическая модель движения ЦМ ВА}{16}{section.3}%
+\contentsline {section}{\numberline {4}Общая постановка задачи синтеза СУ ПТДУ}{17}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Постановка задачи управления ЦМ}{18}{subsection.4.1}%

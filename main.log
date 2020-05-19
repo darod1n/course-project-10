@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 2.9.7440 64-bit) (preloaded format=xelatex 2020.5.19)  19 MAY 2020 23:02
+This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 2.9.7440 64-bit) (preloaded format=xelatex 2020.5.19)  19 MAY 2020 23:12
 entering extended mode
 **./main.tex
 (main.tex
@@ -943,6 +943,9 @@ File: images/linear_vect_draft.jpg Graphic file (type bmp)
 (chapters/motion_math_model.tex [16
 
 ])
+(chapters/formulation_control_system_synthesis.tex [17
+
+] [18])
 The property list \polyglossia@langsetup contains the pairs (without outer
 braces):
 >  {latex/script}  =>  {latin}
@@ -977,28 +980,21 @@ braces):
 >  {russian/babelname}  =>  {russian}
 >  {russian/localnumeral}  =>  {russiannumerals}
 >  {russian/Localnumeral}  =>  {Russiannumerals}.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 38.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 38.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 40.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 40.
  (main.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 38.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 38.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 8595CB68284695AC579A0BA2DAFA9573;2557
-(rerunfilecheck)             After:  420817AEA2EEDEC793DDD08EF02A2FDD;2889.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 40.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 40.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 36D8FBD4F405DE5B9BEE9D43F347037A;3551.
  ) 
 Here is how much of TeX's memory you used:
- 20560 strings out of 414083
- 358595 string characters out of 2898444
- 683660 words of memory out of 3000000
- 37926 multiletter control sequences out of 15000+200000
+ 20566 strings out of 414083
+ 358803 string characters out of 2898444
+ 685768 words of memory out of 3000000
+ 37929 multiletter control sequences out of 15000+200000
  535449 words of font info for 55 fonts, out of 3000000 for 9000
  1348 hyphenation exceptions out of 8191
- 47i,7n,84p,843b,472s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 47i,7n,84p,969b,472s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on main.pdf (16 pages).
+Output written on main.pdf (18 pages).
