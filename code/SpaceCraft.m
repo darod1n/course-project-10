@@ -8,8 +8,8 @@ classdef SpaceCraft
     end
     
     methods
-        function obj = untitled3(inputArg1,inputArg2)
-            %UNTITLED3 Construct an instance of this class
+        function obj = SpaceCraft(inputArg1,inputArg2)
+            %SpaceCraft Construct an instance of this class
             %   Detailed explanation goes here
             obj.Property1 = inputArg1 + inputArg2;
         end
@@ -21,4 +21,3 @@ classdef SpaceCraft
         end
     end
 end
-
