@@ -1,0 +1,62 @@
+\section{Законы управления в контуре стабилизации}
+Закон управления угловым поворотм продольной оси изделия подкрепляется для увеличения точности составляющими нормальной и боковой стабилизации
+\begin{equation}
+	\begin{gathered}
+		\delta_T = \left( K_\vartheta (P) \cdot \Delta \vartheta + K_\vartheta (P) \cdot \tau \cdot \omega_z + K_{\dot{W}} (P) \cdot \Delta \dot{W}_{Y_1} \right) \cdot W_{\vartheta} (j \lambda_0) \\
+		\delta_P = \left( K_\psi (P) \cdot \Delta \psi + K_\psi (P) \cdot \tau \cdot \omega_y - K_{\dot{W}} (P) \cdot \Delta \dot{W}_{Z_1} \right) \cdot W_{\psi} (j \lambda_0)		
+	\end{gathered}
+\end{equation}
+
+Составляющией нормальной и боковой стабилизации контролируют движение объекта в горизонте:
+\begin{equation}
+	\begin{gathered}
+		\Delta \dot{W}_{Y_1} = \dot{W}_{Y_1} - \dot{W}_{Y_1}^{TP} \\
+		\Delta \dot{W}_{Z_1} = \dot{W}_{Z_1} - \dot{W}_{Z_1}^{TP}  \\
+		\dot{W}_{Y_1}^{TP} = C_{12} \cdot \dot{W}_{\xi}^{TP} + C_{32} \cdot \dot{W}_{\zeta}^{TP} \\
+		\dot{W}_{Z_1}^{TP} = C_{13} \cdot \dot{W}_{\xi}^{TP} + C_{33} \cdot \dot{W}_{\zeta}^{TP}
+	\end{gathered}
+\end{equation}
+
+В канале крена закон управления
+
+\begin{equation}
+	\delta_\varphi = \left( K_\varphi (P) \cdot \varphi + K_\varphi (P) \cdot \tau_\varphi \cdot \omega_{x_1} \right) \cdot W_\varphi (j\lambda_0)
+\end{equation}
+
+Фильтры $W_\vartheta$, $W_\psi$, $W_\varphi$ синтезируеются с учетом уровней шумов в измерительном тракте, квантования входной информации и допустимого запаздывания в трактах управления.
+
+Командные сигналы на номерные сопловые блоки вычисляются следующим образом
+
+\begin{equation}
+	\begin{gathered}
+		\delta_{14} = \delta_{13} = \overline{\delta}_R + \delta_\vartheta + \delta_\phi \\
+		\delta_{12} = \delta_{11} = \overline{\delta}_R + \delta_\vartheta - \delta_\phi \\
+		\delta_{22} = \delta_{21} = \overline{\delta}_R - \delta_\psi + \delta_\phi \\
+		\delta_{23} = \delta_{24} = \overline{\delta}_R - \delta_\psi - \delta_\phi \\
+		\delta_{33} = \delta_{34} = \overline{\delta}_R - \delta_\vartheta + \delta_\phi \\
+		\delta_{31} = \delta_{32} = \overline{\delta}_R - \delta_\vartheta - \delta_\phi \\
+		\delta_{42} = \delta_{41} = \overline{\delta}_R + \delta_\psi + \delta_\phi \\
+		\delta_{44} = \delta_{43} = \overline{\delta}_R + \delta_\psi - \delta_\phi 
+	\end{gathered}
+\end{equation}
+
+В случае, если $|\delta_{ij}| > \delta_{O\Gamma P}$, то производится синхронное "сжатие" сигналов угловой стабилизации
+\begin{equation}
+	\begin{gathered}
+		\overline{\delta}_{ij} = \overline{\delta}_R + \left( \pm \delta_{\vartheta} \pm \delta_{\varphi} \right) \cdot K_{comp} \\
+		\overline{\delta}_{ij} = \overline{\delta}_R + \left( \pm \delta_{\psi} \pm \delta_{\varphi} \right) \cdot K_{comp}
+	\end{gathered}
+\end{equation}
+
+Коэффициент "сжатия" вычисляетс следующим образом
+\begin{equation}
+	\begin{matrix}
+			K_{comp} & = & \left\{ \begin{matrix}
+				1, & \text{если} \  max(\delta_{ij}) \leq D_{\text{П}} \  \text{и} \  min(\delta_{ij}) \geq D_\text{М} \\
+				\frac{D_\text{П}}{max(\delta_{ij})}, &  \text{если} \  \left[max(\delta_{ij}) \leq D_{\text{П}} \  \text{и} \  min(\delta_{ij}) \geq D_\text{М} \right] \\
+				%\frac{D_\text{М}}{min(\delta_{ij})}, &  \text{если} \  \left[max(\delta_{ij}) \leq D_{\text{П}} \  \text{и} \  min(\delta_{ij}) \geq D_\text{М} \right] \ \text{или} \  \left[max(\delta_{ij}) \leq D_{\text{П}} \  \text{и} \  min(\delta_{ij}) \geq D_\text{М}  \right]
+			\end{matrix}\right.
+	\end{matrix} 
+\end{equation}
+
+\clearpage

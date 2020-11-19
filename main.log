@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 20.10) (preloaded format=xelatex 2020.11.11)  18 NOV 2020 19:21
+This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 20.10) (preloaded format=xelatex 2020.11.11)  19 NOV 2020 19:07
 entering extended mode
 **./main.tex
 (main.tex
@@ -977,6 +977,14 @@ File: images/linear_vect_draft.jpg Graphic file (type bmp)
 ] [28
 
 ])
+(chapters/control_law_stabilization_loop.tex [29
+
+]
+Overfull \hbox (148.30786pt too wide) detected at line 60
+[] [] 
+ []
+
+[30]) (chapters/control_law_object_stabilization_loop.tex)
 (chapters/synthes_algorithm_stabilisation.tex
 Underfull \hbox (badness 2573) in paragraph at lines 15--16
 []\TU/TimesNewRoman(1)/m/n/14.4 Для получения желаемого быстродействия и характ
@@ -985,18 +993,15 @@ Underfull \hbox (badness 2573) in paragraph at lines 15--16
 
 File: images/struct_scheme_feedback_variable_sost.png Graphic file (type bmp)
 <images/struct_scheme_feedback_variable_sost.png>
+[31
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+] [32] [33] [34
 
-[29
+] [35
 
-] [30] [31] [32
+] [36
 
-] [33
-
-] [34
-
-]) (chapters/feasibility_analysis.tex [35
+]) (chapters/feasibility_analysis.tex [37
 
 ]
 Underfull \hbox (badness 1152) in paragraph at lines 9--10
@@ -1004,16 +1009,16 @@ Underfull \hbox (badness 1152) in paragraph at lines 9--10
 орений движу-
  []
 
-[36
+[38
 
-] [37] [38
+] [39] [40
 
-] [39]) (chapters/conclusion.tex
+] [41]) (chapters/conclusion.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\uppercase' on input line 2.
 
-[40
+[42
 
 ])
 The property list \polyglossia@langsetup contains the pairs (without outer
@@ -1056,15 +1061,15 @@ LaTeX Info: Redefining \sffamily on input line 20.
 LaTeX Info: Redefining \ttfamily on input line 20.
 )
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 6136AC7CB673CB09D09E969F56950967;8982.
+(rerunfilecheck)             Checksum: E9C635663325681ACC43FEC82107DB80;9779.
  ) 
 Here is how much of TeX's memory you used:
- 20287 strings out of 412237
- 351474 string characters out of 2855223
- 724823 words of memory out of 3000000
- 39462 multiletter control sequences out of 15000+200000
+ 20295 strings out of 412237
+ 351813 string characters out of 2855223
+ 725658 words of memory out of 3000000
+ 39464 multiletter control sequences out of 15000+200000
  538199 words of font info for 60 fonts, out of 3000000 for 9000
  1348 hyphenation exceptions out of 8191
- 76i,8n,84p,1594b,543s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 76i,16n,84p,1594b,535s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on main.pdf (40 pages).
+Output written on main.pdf (42 pages).

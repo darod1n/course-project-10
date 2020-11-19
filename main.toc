@@ -24,13 +24,15 @@
 \contentsline {section}{\numberline {6}Синтез желаемой кинематической траектории}{26}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Алгоритмы наведения}{27}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}Результаты моделирования}{28}{subsection.6.2}%
-\contentsline {section}{\numberline {7}Синтез алгоритмов стабилизации}{29}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Метод модального управления}{29}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Постановка задачи слежения по ЦМ}{32}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Результаты моделирования переходных процессов}{33}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}Результаты моделирования системы стабилизации ЦМ}{34}{subsection.7.4}%
-\contentsline {section}{\numberline {8}Анализ технической реализуемости системы стабилизации ЦМ}{35}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Выбор датчиков}{36}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Реализация на БЦВК}{38}{subsection.8.2}%
-\contentsline {paragraph}{\centerline {{ЗАКЛЮЧЕНИЕ}}\vspace {1.5em}}{40}{section*.4}%
-\contentsline {section}{\uppercase {ЗАКЛЮЧЕНИЕ}}{40}{section*.4}%
+\contentsline {section}{\numberline {7}Законы управления в контуре стабилизации}{29}{section.7}%
+\contentsline {section}{\numberline {8}Законы управления в контуре стабилизации объекта}{31}{section.8}%
+\contentsline {section}{\numberline {9}Синтез алгоритмов стабилизации}{31}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Метод модального управления}{31}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Постановка задачи слежения по ЦМ}{34}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Результаты моделирования переходных процессов}{35}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}Результаты моделирования системы стабилизации ЦМ}{36}{subsection.9.4}%
+\contentsline {section}{\numberline {10}Анализ технической реализуемости системы стабилизации ЦМ}{37}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Выбор датчиков}{38}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Реализация на БЦВК}{40}{subsection.10.2}%
+\contentsline {paragraph}{\centerline {{ЗАКЛЮЧЕНИЕ}}\vspace {1.5em}}{42}{section*.4}%
+\contentsline {section}{\uppercase {ЗАКЛЮЧЕНИЕ}}{42}{section*.4}%
