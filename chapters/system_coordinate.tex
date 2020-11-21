@@ -1,0 +1,96 @@
+\section{Системы координат}
+В работе используются посадочная система координат и связанная с ВА система координат.
+
+Задачи наведения решаются в посадочной системе координат (ПСК):
+\begin{itemize}
+	\item начало координат - в точке посадки;
+	\item Ось $O \eta$ - по местной вертикали;
+	\item Ось $O \xi$ - по касательной к меридиану в точке посадки и направлена на север;
+	\item Ось $O \zeta$ - дополняет систему до правой;
+\end{itemize}
+
+
+Силы и моменты, действующие на ЛА рассмотрим в связанной системе координат $O X_1 Y_1 Z_1$ - правая прямоугольная система координат, связанная с изделием (ССК):
+\begin{itemize}
+	\item Ось $O X_1$ - совпадает с продольной осью симметрии изделия и направлена в сторону хвостовой части изделия;
+	\item Ось $O Y_1$ - направлена в сторону I строительной плоскости изделия;
+	\item Ось $O Z_1$ - дополняет систему координат до правой;
+\end{itemize}
+
+\clearpage
+
+\subsection{Посадочная система координат}
+
+
+\clearpage
+
+\subsection{Связанная система координат}
+
+\clearpage
+
+\subsection{Матрица перехода из ПСК в ССК}
+Для составления матрицы перехода из ПСК в ССК необходимо составить элементарные матрицы последовательного поворота на один угол и перемножить их. Повороты будем осуществлять против часовой стрелки, т. е. в положительном направлении, в следующей последовательности: $\vartheta \rightarrow \psi \rightarrow \varphi \rightarrow$ как показано на рис. 
+% Вставить рисунок взаимного располождения 
+
+Для первого поворота на угол $\vartheta$, получим: 
+\begin{equation}
+	A_\vartheta = \begin{bmatrix}
+		\cos \vartheta & \sin \vartheta & 0 \\
+		- \sin\vartheta & \cos \vartheta & 0 \\
+		0 &	& 1 
+	\end{bmatrix},
+\end{equation}
+для второго поворота на угол $\psi$
+\begin{equation}
+	A_\psi = \begin{bmatrix}
+		\cos \psi & 0 & -\sin \psi  \\
+		0 & 1 & 0 \\
+		-\sin \psi & 0 & \cos \psi
+	\end{bmatrix},
+\end{equation}
+для третьего поворота на угол $\phi$
+\begin{equation}
+	A_\varphi = \begin{bmatrix}
+		1 & 0 & 0  \\
+		0 & \cos \varphi & \sin \varphi \\
+		0 & -\sin \varphi  & \varphi
+	\end{bmatrix}
+\end{equation}
+
+Произведение трех матриц имеет вид:
+\begin{equation}
+	A = A_\varphi A_\psi A_\vartheta
+\end{equation}
+
+В результате перемножения получим матрицу перехода от ПСК к ССК: 
+\begin{equation}
+	A = \begin{bmatrix}
+		a_{11} & a_{12} & a_{13} \\
+		a_{21} & a_{22} & a_{23} \\
+		a_{31} & a_{32} & a_{23} 
+	\end{bmatrix},
+\end{equation}
+где
+\begin{equation}
+	\begin{gathered}
+		a_{11} = \cos \vartheta \cdot \cos \varphi \\
+		a_{12} = \cos \vartheta \cdot \sin \varphi \cdot \sin \psi - \sin \vartheta \cdot \cos \varphi \\
+		a_{13} = \cos \vartheta \cdot \sin \psi \cdot \cos \varphi + \sin \vartheta \cdot \sin \varphi \\
+		a_{21} = \sin \vartheta \cdot \cos \psi \\
+		a_{22} = \sin \vartheta \cdot \sin \varphi \cdot \sin \psi + \cos \vartheta \cdot \cos \varphi \\
+		a_{23} = \sin \vartheta \cdot \sin \psi \cdot \cos \varphi - \cos \vartheta \cdot \sin \varphi \\
+		a_{31} = - \sin \psi \\
+		a_{31} = \cos \psi \cdot \sin \varphi \\
+		a_{31} = \cos \psi \cdot \cos \varphi \\
+	\end{gathered}
+\end{equation}
+
+Формула перехода имеет вид:
+\begin{equation}
+	\begin{bmatrix}
+		\xi \\
+		\eta \\
+		\zeta
+	\end{bmatrix} = A \cdot \begin{bmatrix}	X_1 \\ Y_1 \\ Z_1 \end{bmatrix}
+\end{equation}
+\clearpage

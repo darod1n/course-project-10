@@ -13,26 +13,32 @@
 \contentsline {subsection}{\numberline {1.5}Требования к СУ}{14}{subsection.1.5}%
 \contentsline {section}{\numberline {2}Схема действия}{15}{section.2}%
 \contentsline {section}{\numberline {3}Алгоритм определения момента включения ПТДУ}{15}{section.3}%
-\contentsline {section}{\numberline {4}Математическая модель движения ЦМ ВА}{17}{section.4}%
+\contentsline {section}{\numberline {4}Системы координат}{17}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Посадочная система координат}{18}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Связанная система координат}{19}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Уравнения динамики движения ЦМ в траекторной СК}{20}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Уравнения динамики движения ЦМ в связанной СК}{22}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Математическая модель ориентации}{23}{subsection.4.5}%
-\contentsline {section}{\numberline {5}Общая постановка задачи синтеза СУ ПТДУ}{24}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Постановка задачи управления ЦМ}{25}{subsection.5.1}%
-\contentsline {section}{\numberline {6}Синтез желаемой кинематической траектории}{26}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Алгоритмы наведения}{27}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Результаты моделирования}{28}{subsection.6.2}%
-\contentsline {section}{\numberline {7}Законы управления в контуре стабилизации}{29}{section.7}%
-\contentsline {section}{\numberline {8}Законы управления в контуре стабилизации объекта}{31}{section.8}%
-\contentsline {section}{\numberline {9}Синтез алгоритмов стабилизации}{31}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Метод модального управления}{31}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}Постановка задачи слежения по ЦМ}{34}{subsection.9.2}%
-\contentsline {subsection}{\numberline {9.3}Результаты моделирования переходных процессов}{35}{subsection.9.3}%
-\contentsline {subsection}{\numberline {9.4}Результаты моделирования системы стабилизации ЦМ}{36}{subsection.9.4}%
-\contentsline {section}{\numberline {10}Анализ технической реализуемости системы стабилизации ЦМ}{37}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Выбор датчиков}{38}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}Реализация на БЦВК}{40}{subsection.10.2}%
-\contentsline {paragraph}{\centerline {{ЗАКЛЮЧЕНИЕ}}\vspace {1.5em}}{42}{section*.4}%
-\contentsline {section}{\uppercase {ЗАКЛЮЧЕНИЕ}}{42}{section*.4}%
+\contentsline {subsection}{\numberline {4.3}Матрица перехода из ПСК в ССК}{20}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Математическая модель движения ЦМ ВА}{22}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Посадочная система координат}{23}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Связанная система координат}{24}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Уравнения динамики движения ЦМ в траекторной СК}{25}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Уравнения динамики движения ЦМ в связанной СК}{27}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Математическая модель ориентации}{28}{subsection.5.5}%
+\contentsline {section}{\numberline {6}Общая постановка задачи синтеза СУ ПТДУ}{29}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Постановка задачи управления ЦМ}{30}{subsection.6.1}%
+\contentsline {section}{\numberline {7}Синтез желаемой кинематической траектории}{31}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Алгоритмы наведения}{32}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Результаты моделирования}{33}{subsection.7.2}%
+\contentsline {section}{\numberline {8}Законы управления в контуре стабилизации}{34}{section.8}%
+\contentsline {section}{\numberline {9}Законы управления в контуре стабилизации объекта}{36}{section.9}%
+\contentsline {section}{\numberline {10}Синтез алгоритмов стабилизации}{36}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Метод модального управления}{36}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Постановка задачи слежения по ЦМ}{39}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Результаты моделирования переходных процессов}{40}{subsection.10.3}%
+\contentsline {subsection}{\numberline {10.4}Результаты моделирования системы стабилизации ЦМ}{41}{subsection.10.4}%
+\contentsline {section}{\numberline {11}Анализ технической реализуемости системы стабилизации ЦМ}{42}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Выбор датчиков}{43}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}Реализация на БЦВК}{45}{subsection.11.2}%
+\contentsline {paragraph}{\centerline {{ЗАКЛЮЧЕНИЕ}}\vspace {1.5em}}{47}{section*.4}%
+\contentsline {section}{\uppercase {ЗАКЛЮЧЕНИЕ}}{47}{section*.4}%
+\contentsline {paragraph}{\centerline {{Список использованных источников}}\vspace {1.5em}}{48}{section*.5}%
+\contentsline {section}{\uppercase {Список использованных источников}}{48}{section*.5}%
