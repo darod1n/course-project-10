@@ -69,7 +69,7 @@
 
 % Списки
 \usepackage{enumitem}
-\setlist[enumerate,itemize]{leftmargin=1.45\parindent} % Отступы в списках
+\setlist[enumerate,itemize]{leftmargin=1.46\parindent} % Отступы в списках
 \renewcommand{\labelitemi}{--}
 
 %\makeatletter
@@ -113,7 +113,7 @@
 
 % Оформление заголовков
 \usepackage[compact,explicit]{titlesec}
-\titleformat{\section}{}{}{12.5mm}{\centering{\thesection\quad\MakeTextUppercase{#1}}\vspace{1.5em}}
+\titleformat{\section}[block]{\vspace{1em}}{}{12.5mm}{\thesection\quad#1\vspace{1em}}
 \titleformat{\subsection}[block]{\vspace{1em}}{}{12.5mm}{\thesubsection\quad#1\vspace{1em}}
 \titleformat{\subsubsection}[block]{\vspace{1em}\normalsize}{}{12.5mm}{\thesubsubsection\quad#1\vspace{1em}}
 \titleformat{\paragraph}[block]{\normalsize}{}{12.5mm}{\MakeTextUppercase{#1}}
