@@ -1,5 +1,5 @@
 %	Синтез желаемой кинематической траектории
-\section{Синтез желаемой кинематической траектории}
+\section{Алгоритм наведения}
 
 Мы имеем начальные условия и конечные координаты траектории на момент времени T. Кинематическая функция должна быть гладкой функцией хотя бы второго порядка.
 
@@ -19,11 +19,47 @@
 \begin{equation}
 	\Ddot{\alpha}(t) = 2 \alpha_2 + 6 \alpha_3 t + 12 \alpha_4 t^2 + 20 \alpha_5 t^3
 \end{equation}
-Где $\alpha(t)$ любая из координат $\xi(t)$, $\eta(t)$, $\zeta(t)$, $t$ - время, на котором действуют коэффициенты $a_0-a_5$.
+Где $\alpha(t)$ любая из координат $\xi(t)$, $\eta(t)$, $\zeta(t)$, $t$ - время, на котором действуют коэффициенты $a_0-a_5$. 
+
+Задаваясь начальными и конечными значениями координат $\alpha (0)$, $\dot{\alpha} (0)$, $\ddot{\alpha} (0)$, и $\alpha (T)$, $\dot{\alpha} (T)$, $\ddot{\alpha} (T)$ получаем три тройки уравнений относительно $a_{3 \xi}$, $a_{3 \eta}$ , $a_{3 \zeta}$, $a_{4 \xi}$, $a_{4 \eta}$ , $a_{4 \zeta}$, $a_{5 \xi}$, $a_{5 \eta}$ , $a_{5 \zeta}$ добавляя к ним коэффициенты $a_{0 \xi}$, $a_{0 \eta}$ , $a_{0 \zeta}$, $a_{1 \xi}$, $a_{1 \eta}$ , $a_{1 \zeta}$, $a_{2 \xi}$, $a_{2 \eta}$ , $a_{2 \zeta}$, которые определяются начальными условиями, имеем следующее решение для определения многочленов пятого порядка:
+\begin{equation}
+	\begin{gathered}
+		a_0 = \alpha (0), \\
+		a_1 = \dot{\alpha} (0) \\
+		a_2 = \ddot{\alpha} (0) \\
+		a_3 = \frac{10 \cdot ( a(T) - a(0) ) }{T^3} - \frac{4 \cdot \dot{a}(T) + 6 * \dot{a}(0) ) }{T^2} +  \frac{ \ddot{a}(T) - 3 \cdot \ddot{a}(0) }{2 \cdot T}\\
+		a_4 = \frac{-15 \cdot ( a(T) - a(0) ) }{T^4} + \frac{7 \cdot \dot{a}(T) - 8 * \dot{a}(0) ) }{T^3} +  \frac{ 1.5 \cdot \ddot{a}(T) -  \ddot{a}(0) }{T^3} \\
+		a_5 = \frac{6 \cdot ( a(T) - a(0) ) }{T^5} + \frac{3 \cdot \dot{a}(T) - \dot{a}(0) ) }{T^4} +  \frac{\ddot{a}(T) -\ddot{a}(0) }{T^3} \\
+	\end{gathered}
+\end{equation}
+$T$ - время, оставшееся до окончания процесса, начальное значение которого определяется в момента запуска ПТДУ.
 \clearpage
 
-\subsection{Алгоритмы наведения}
-\clearpage
+\subsection{Формирование вектора требуемой ориентации ВА}
+Требуемая ориентация ветора тяги находится из компонент вектора требуемого кажущегося ускорения в виде соответствующих направляющих косинусов
+\begin{equation}
+	\overline{e}^R = (e^{R}_\xi, e^{R}_\eta, e^{R}_\zeta)
+\end{equation}
 
-\subsection{Результаты моделирования}
+\begin{equation}
+	\begin{gathered}
+		\dot{W}^\text{ТР}_\xi = \dot{V}_\xi, \\
+		\dot{W}^\text{ТР}_\eta = \dot{V}_\eta + g, \\
+		\dot{W}^\text{ТР}_\zeta = \dot{V}_\zeta,
+	\end{gathered}
+\end{equation}
+
+Рассчитываем требуемое кажущиеся ускорение ЛА
+\begin{equation}
+	\dot{W}_\text{ТР} = \sqrt{ \dot{W}^{\text{ТР}^2}_\xi + \dot{W}^{\text{ТР}^2}_\eta +\dot{W}^{\text{ТР}^2}_\zeta }
+\end{equation}
+
+Так как требуемое направлеение оси $X$ противоположно направлению тяги, выражения принимают следующий вид:
+\begin{equation}
+	\begin{gathered}
+		e^R_\xi = - \frac{\dot{W}^\text{ТР}_\xi}{\dot{W}_\text{ТР}}, \\
+		e^R_\eta = - \frac{\dot{W}^\text{ТР}_\eta}{\dot{W}_\text{ТР}}, \\
+		e^R_\zeta = - \frac{\dot{W}^\text{ТР}_\zeta}{\dot{W}_\text{ТР}} \\
+	\end{gathered}
+\end{equation}
 \clearpage

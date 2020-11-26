@@ -5,7 +5,7 @@ close all;
 %% Начальные условия
 T = 26;
 g = -9.8;
-dt = 0.001;
+dt = 0.01;
 t = 0:dt:T;
 N = numel(t);
 C = [0 1];
@@ -215,18 +215,7 @@ for i=1:N
      VZ1TP(1,i) = a13*speedXi(1,i) + a23*speedEta(1,i) + a33*speedZeta(1,i);
      WZ1TP(1,i) = a13*boostXi(1,i) + a23*boostEta(1,i) + a33*boostZeta(1,i);
 end
-[coefEta0, coefEta1, coefEta2, coefEta3, coefEta4, coefEta5] = getCoefficient(etaPathInit-10, etaSpeedInit+3, etaBoostInit, etaPathFin, etaSpeedFin, etaBoostFin, T);
 
-%   pathEta - траектория пути по Эта
-%   speedEta - скорость по Эта
-%   boostEta - ускорения по эта
-[pathEtaBias, speedEtaBias, boostEtaBias] = getPathSpeedBoost(coefEta0, coefEta1, coefEta2, coefEta3, coefEta4, coefEta5, t, N);
-p = [-0.1; -2];
-pe = 2*[-8; -7];
-K = place(A, B, p);
-u = zeros(1, N);
-K(1, 1) = 0.5;
-K(1, 2) = 2.5;
 for i=1:N-1
      % Пересчет матрицы направляющих косинусов
      a11 = cos(Teta(1,i))*cos(Psi(1,i));
@@ -407,102 +396,115 @@ for i=1:N-1
      OmegaY1(1,i+1) = OmegaY1(1,i) + dt*MY1(1,i)/Iyy;
      OmegaZ1(1,i+1) = OmegaZ1(1,i) + dt*MZ1(1,i)/Izz;
 end
-figure
-plot(t, pathEtaBias)
-% p = [-0.1; -2];
-% pe = 2*[-8; -7];
-% K = place(A, B, p);
-% u = zeros(1, N);
+
+[coefEta0, coefEta1, coefEta2, coefEta3, coefEta4, coefEta5] = getCoefficient(etaPathInit-5, etaSpeedInit+1, etaBoostInit, etaPathFin, etaSpeedFin, etaBoostFin, T);
+
+%   pathEta - траектория пути по Эта
+%   speedEta - скорость по Эта
+%   boostEta - ускорения по эта
+[pathEtaBias, speedEtaBias, boostEtaBias] = getPathSpeedBoost(coefEta0, coefEta1, coefEta2, coefEta3, coefEta4, coefEta5, t, N);
+p = [-0.01; -0.5];
+pe = 2*[-8; -7];
+K = place(A, B, p);
+u = zeros(1, N);
+Kr = p(1, 1) * p(2, 1) *0.001;
 % K(1, 1) = 0.5;
 % K(1, 2) = 2.5;
-% for i = 1:N-1
-%    if abs(pathEtaBias(1, i) - pathEta(1, i)) > 0.5
-%         u(1, i) = - K(1, 1) * (pathEtaBias(1, i) - pathEta(1, i)) - K(1, 2) * (speedEtaBias(1, i) - speedEta(1, i))+1.5;
-%         speedEtaBias(1, i+1) = speedEtaBias(1, i) + dt*u(1, i);
-%         pathEtaBias(1, i+1) = pathEtaBias(1, i) + dt*speedEtaBias(1, i);
-%    else
-%        u(1, i) = u(1, i-1);
-%        speedEtaBias(1, i+1) = speedEta(1, i+1);
-%        pathEtaBias(1, i+1) = pathEta(1, i+1);
-%    end
-%    speedEtaBias(1, i+1) = speedEtaBias(1, i) + dt*u(1, i);
-%    pathEtaBias(1, i+1) = pathEtaBias(1, i) + dt*speedEtaBias(1, i);
-% end
+for i = 1:N-1
+        u(1, i) = - K(1, 1) * (pathEtaBias(1, i) - pathEta(1, i)) - K(1, 2) * (speedEtaBias(1, i) - speedEta(1, i)) +Kr*pathEta(1, i);
+        speedEtaBias(1, i+1) = speedEtaBias(1, i) + dt*u(1, i);
+        pathEtaBias(1, i+1) = pathEtaBias(1, i) + dt*speedEtaBias(1, i);
 
-%  Графики траекторий
-% %   Траектория по Кси
-% figure('Name', 'Траектория движения по координате Кси');
-% subplot(3, 3, 1);
-% plot(t, pathXi);
-% title('Траектория движения по координате Кси');
-% 
-% %   Траектория по Эта
-% subplot(3, 3, 2);
-% plot(t, pathEta);
-% title('Траектория движения по координате Эта')
-% 
-% %   Траектория по Дзета
-% subplot(3, 3, 3);
-% plot(t, pathZeta);
-% title('Траектория движения по координате Дзета')
-% 
-% %   Трехмерный график
-% % subplot(3, 3, 4);
-% % plot3(pathZeta, pathXi, pathEta);
-% 
-% %%  Графики изменения скорости
-% %   Скорость по Кси
+end
+
+% Графики траекторий
+%   Траектория по Кси
+figure('Name', 'Траектория движения по координате Кси, м');
+subplot(3, 3, 1);
+plot(t, pathXi);
+title('Траектория движения по координате Кси, м');
+xlabel('Время, с');
+
+%   Траектория по Эта
+subplot(3, 3, 2);
+plot(t, pathEta);
+title('Траектория движения по координате Эта, м')
+xlabel('Время, с');
+
+%   Траектория по Дзета
+subplot(3, 3, 3);
+plot(t, pathZeta);
+title('Траектория движения по координате Дзета, м')
+xlabel('Время, с');
+
+%   Трехмерный график
 % subplot(3, 3, 4);
-% plot(t, speedXi);
-% title('График изменения скорости по Кси');
-% 
-% %   Скорость по Эта
-% subplot(3, 3, 5);
-% plot(t, speedEta);
-% title('График изменения скорости по Эта');
-% 
-% %   Скорость по Дзета
-% subplot(3, 3, 6);
-% plot(t, speedZeta);
-% title('График изменения скорости по Дзета');
-% 
-% %%  Графики изменения ускорения
-% %   Ускорение по Кси
-% subplot(3, 3, 7);
-% plot(t, boostXi);
-% title('График изменения ускорения по Кси');
-% 
-% %   Ускорение по Эта
-% subplot(3, 3, 8);
-% plot(t, boostEta);
-% title('График изменения ускорения по Эта');
-% 
-% %  Ускорение по Дзета
-% subplot(3, 3, 9);
-% plot(t, boostZeta);
-% title('График изменения ускорения по Дзета');
-% %%
-% % % Тректория с учетом модального управления
-% % figure('Name', 'Тректория с учетом модального управления')
-% % Графики управлений
-% figure('Name', 'управлений')
-% plot(t, u);
+% plot3(pathZeta, pathXi, pathEta);
+
+%%  Графики изменения скорости
+%   Скорость по Кси
+subplot(3, 3, 4);
+plot(t, speedXi);
+title('График изменения скорости по Кси');
+xlabel('Время, с');
+
+%   Скорость по Эта
+subplot(3, 3, 5);
+plot(t, speedEta);
+title('График изменения скорости по Эта');
+xlabel('Время, с');
+
+%   Скорость по Дзета
+subplot(3, 3, 6);
+plot(t, speedZeta);
+title('График изменения скорости по Дзета');
+xlabel('Время, с');
+
+%%  Графики изменения ускорения
+%   Ускорение по Кси
+subplot(3, 3, 7);
+plot(t, boostXi);
+title('График изменения ускорения по Кси');
+xlabel('Время, с');
+
+%   Ускорение по Эта
+subplot(3, 3, 8);
+plot(t, boostEta);
+title('График изменения ускорения по Эта');
+xlabel('Время, с');
+
+%  Ускорение по Дзета
+subplot(3, 3, 9);
+plot(t, boostZeta);
+title('График изменения ускорения по Дзета');
+xlabel('Время, с');
 %%
-%{
-%   Реакция системы на импульс
-figure('Name', 'Импульс');
+% Тректория с учетом модального управления
+figure('Name', 'Тректория с учетом модального управления')
+plot(t, pathEta);
+ylabel('Высота, м')
+xlabel('Время, с');
+hold on;
+plot(t, pathEtaBias)
+legend('Требуемая траектория', 'Траектория с учетом модального управления')
+ylabel('Высота, м')
+xlabel('Время, с');
+
+% Графики управлений
+figure('Name', 'управлений')
+plot(t, u);
+
+% График ошибки 
+figure('Name', 'Отклонение от требуемой траектории')
+plot(t, (pathEtaBias - pathEta))
+ylabel('м')
+xlabel('Время, с');
+
+% Пространственная траектория
+figure('Name', 'Пространственная траектория')
+plot3(pathXi, pathZeta, pathEtaBias);
 grid on;
-impulse(sys);
-
-%   Диаграмма Боде
-figure('Name', 'Диаграмма Боде');
-bode(sys)
-
-%   Реакция системы на единицу
-figure('Name', 'Реакция системы на единицу')
-step(sys)
-
-%   График траектор
-figure('Name', 'Траектория')
-plot(t, y, t, f)
-%}
+hold all;
+xlabel('\xi');
+ylabel('\zeta');
+zlabel('\eta');
