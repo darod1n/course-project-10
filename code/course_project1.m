@@ -3,7 +3,7 @@ clear variables;
 close all;
 
 %% Начальные условия
-T = 26;
+T = 20;
 g = -9.8;
 dt = 0.01;
 t = 0:dt:T;
@@ -215,7 +215,6 @@ for i=1:N
      VZ1TP(1,i) = a13*speedXi(1,i) + a23*speedEta(1,i) + a33*speedZeta(1,i);
      WZ1TP(1,i) = a13*boostXi(1,i) + a23*boostEta(1,i) + a33*boostZeta(1,i);
 end
-
 for i=1:N-1
      % Пересчет матрицы направляющих косинусов
      a11 = cos(Teta(1,i))*cos(Psi(1,i));
@@ -396,7 +395,12 @@ for i=1:N-1
      OmegaY1(1,i+1) = OmegaY1(1,i) + dt*MY1(1,i)/Iyy;
      OmegaZ1(1,i+1) = OmegaZ1(1,i) + dt*MZ1(1,i)/Izz;
 end
-
+RX1 = boostEta.*4000;
+for i = 1: N
+    if RX1(1, i) > 15000
+        RX1(1, i) = 15000;
+    end
+end
 [coefEta0, coefEta1, coefEta2, coefEta3, coefEta4, coefEta5] = getCoefficient(etaPathInit-5, etaSpeedInit+1, etaBoostInit, etaPathFin, etaSpeedFin, etaBoostFin, T);
 
 %   pathEta - траектория пути по Эта
@@ -414,10 +418,35 @@ for i = 1:N-1
         u(1, i) = - K(1, 1) * (pathEtaBias(1, i) - pathEta(1, i)) - K(1, 2) * (speedEtaBias(1, i) - speedEta(1, i)) +Kr*pathEta(1, i);
         speedEtaBias(1, i+1) = speedEtaBias(1, i) + dt*u(1, i);
         pathEtaBias(1, i+1) = pathEtaBias(1, i) + dt*speedEtaBias(1, i);
-
 end
 
 % Графики траекторий
+figure('Name', 'Тяга двигателя')
+plot(t, RX1)
+
+N = numel(t);
+P = progDavlenie(t);
+R = zeros(1, length(P));
+for i = 1:length(P)
+    R(1, i) = 2 * abs(randn);
+end
+
+Ppr = smooth(t, P' + R', 0.1,'rloess')';
+
+for i = 2: length(P)
+    if Ppr(1, i) < P(1, i)
+        Ppr(1, i) = Ppr(1, i - 1) + rand^2*0.05;
+    end
+end
+
+figure('Name', 'Суммарная тяга');
+Ppr = ones(1, length(P)) * 1000;
+P = P.*1250;
+plot(t, P);
+grid on;
+legend('R%\sum%');
+saveas(gcf, 'Rsum.png');
+
 %   Траектория по Кси
 figure('Name', 'Траектория движения по координате Кси, м');
 subplot(3, 3, 1);
@@ -428,13 +457,13 @@ xlabel('Время, с');
 %   Траектория по Эта
 subplot(3, 3, 2);
 plot(t, pathEta);
-title('Траектория движения по координате Эта, м')
+title('Траектория движения по координате Эта, м');
 xlabel('Время, с');
 
 %   Траектория по Дзета
 subplot(3, 3, 3);
 plot(t, pathZeta);
-title('Траектория движения по координате Дзета, м')
+title('Траектория движения по координате Дзета, м');
 xlabel('Время, с');
 
 %   Трехмерный график
